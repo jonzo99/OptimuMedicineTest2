@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		D96B5FD126C4E9CA00F116D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96B5FD026C4E9CA00F116D7 /* AppDelegate.swift */; };
 		D96B5FD326C4E9CA00F116D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96B5FD226C4E9CA00F116D7 /* SceneDelegate.swift */; };
-		D96B5FD526C4E9CA00F116D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96B5FD426C4E9CA00F116D7 /* ViewController.swift */; };
 		D96B5FD826C4E9CA00F116D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96B5FD626C4E9CA00F116D7 /* Main.storyboard */; };
 		D96B5FDA26C4E9CB00F116D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D96B5FD926C4E9CB00F116D7 /* Assets.xcassets */; };
 		D96B5FDD26C4E9CB00F116D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96B5FDB26C4E9CB00F116D7 /* LaunchScreen.storyboard */; };
 		D96B5FE826C4E9CB00F116D7 /* OptimuMedicineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96B5FE726C4E9CB00F116D7 /* OptimuMedicineTests.swift */; };
 		D96B5FF326C4E9CB00F116D7 /* OptimuMedicineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96B5FF226C4E9CB00F116D7 /* OptimuMedicineUITests.swift */; };
+		D99CFE5C26C586F000B24CB3 /* critalAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = D99CFE5B26C586F000B24CB3 /* critalAlarm.wav */; };
+		D99CFE5E26C586F900B24CB3 /* iphone_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D99CFE5D26C586F900B24CB3 /* iphone_alarm.mp3 */; };
+		D99CFE6026C58A6100B24CB3 /* HamiltonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CFE5F26C58A6100B24CB3 /* HamiltonViewController.swift */; };
+		D99CFE6226C58ACB00B24CB3 /* freeFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CFE6126C58ACB00B24CB3 /* freeFlowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 		D96B5FCD26C4E9CA00F116D7 /* OptimuMedicine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptimuMedicine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96B5FD026C4E9CA00F116D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D96B5FD226C4E9CA00F116D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D96B5FD426C4E9CA00F116D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D96B5FD726C4E9CA00F116D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D96B5FD926C4E9CB00F116D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D96B5FDC26C4E9CB00F116D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		D96B5FEE26C4E9CB00F116D7 /* OptimuMedicineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptimuMedicineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96B5FF226C4E9CB00F116D7 /* OptimuMedicineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimuMedicineUITests.swift; sourceTree = "<group>"; };
 		D96B5FF426C4E9CB00F116D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D99CFE5B26C586F000B24CB3 /* critalAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = critalAlarm.wav; sourceTree = "<group>"; };
+		D99CFE5D26C586F900B24CB3 /* iphone_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = iphone_alarm.mp3; sourceTree = "<group>"; };
+		D99CFE5F26C58A6100B24CB3 /* HamiltonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamiltonViewController.swift; sourceTree = "<group>"; };
+		D99CFE6126C58ACB00B24CB3 /* freeFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freeFlowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,16 @@
 		D96B5FCF26C4E9CA00F116D7 /* OptimuMedicine */ = {
 			isa = PBXGroup;
 			children = (
+				D99CFE5B26C586F000B24CB3 /* critalAlarm.wav */,
+				D99CFE5D26C586F900B24CB3 /* iphone_alarm.mp3 */,
 				D96B5FD026C4E9CA00F116D7 /* AppDelegate.swift */,
 				D96B5FD226C4E9CA00F116D7 /* SceneDelegate.swift */,
-				D96B5FD426C4E9CA00F116D7 /* ViewController.swift */,
 				D96B5FD626C4E9CA00F116D7 /* Main.storyboard */,
+				D99CFE6126C58ACB00B24CB3 /* freeFlowViewController.swift */,
 				D96B5FD926C4E9CB00F116D7 /* Assets.xcassets */,
 				D96B5FDB26C4E9CB00F116D7 /* LaunchScreen.storyboard */,
 				D96B5FDE26C4E9CB00F116D7 /* Info.plist */,
+				D99CFE5F26C58A6100B24CB3 /* HamiltonViewController.swift */,
 			);
 			path = OptimuMedicine;
 			sourceTree = "<group>";
@@ -233,7 +242,9 @@
 			files = (
 				D96B5FDD26C4E9CB00F116D7 /* LaunchScreen.storyboard in Resources */,
 				D96B5FDA26C4E9CB00F116D7 /* Assets.xcassets in Resources */,
+				D99CFE5E26C586F900B24CB3 /* iphone_alarm.mp3 in Resources */,
 				D96B5FD826C4E9CA00F116D7 /* Main.storyboard in Resources */,
+				D99CFE5C26C586F000B24CB3 /* critalAlarm.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D96B5FD526C4E9CA00F116D7 /* ViewController.swift in Sources */,
+				D99CFE6226C58ACB00B24CB3 /* freeFlowViewController.swift in Sources */,
 				D96B5FD126C4E9CA00F116D7 /* AppDelegate.swift in Sources */,
+				D99CFE6026C58A6100B24CB3 /* HamiltonViewController.swift in Sources */,
 				D96B5FD326C4E9CA00F116D7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,7 +30,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        print("app is in background")
+    }
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        print("app is in foreground")
+    }
+    
+    func stateResorationActivity(for scene: UIScene) -> NSUserActivity? {
+        return scene.userActivity
+    }
+    
+    func application(_ application: UIApplication, shouldSaveSecureApplicationState coder: NSCoder) -> Bool {
+        return true
+    }
+    
+    func application(_ application: UIApplication, shouldRestoreSecureApplicationState coder: NSCoder) -> Bool {
+        return true
+    }
 
 }
 
