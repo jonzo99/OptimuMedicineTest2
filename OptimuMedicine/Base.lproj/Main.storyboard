@@ -79,14 +79,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfh-4E-qMF">
-                                <rect key="frame" x="16" y="576" width="98" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q17-PS-HNu">
+                                <rect key="frame" x="103" y="465" width="170" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Reset" backgroundImage="buttonImageNEW">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmY-HP-LUI">
                                 <rect key="frame" x="139" y="576" width="98" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -103,13 +102,14 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q17-PS-HNu">
-                                <rect key="frame" x="103" y="465" width="170" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfh-4E-qMF">
+                                <rect key="frame" x="16" y="576" width="98" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Reset" backgroundImage="buttonImageNEW">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZD2-RB-aw2"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -221,6 +221,9 @@
                                     <segment title="Adult/Ped"/>
                                     <segment title="Neonate"/>
                                 </segments>
+                                <connections>
+                                    <action selector="patientDidChange:" destination="1qC-Yv-LYR" eventType="valueChanged" id="C3l-iO-2cH"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLa-QL-QJQ">
                                 <rect key="frame" x="180" y="477" width="154" height="34"/>
@@ -236,6 +239,9 @@
                                 <state key="normal" title="Reset" backgroundImage="buttonImageNEW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="1qC-Yv-LYR" eventType="touchUpInside" id="h9G-pe-LQB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egl-bc-aZN">
                                 <rect key="frame" x="138" y="576" width="98" height="42"/>
@@ -244,6 +250,9 @@
                                 <state key="normal" title="Calc" backgroundImage="buttonImageNEW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="calcButtonTapped:" destination="1qC-Yv-LYR" eventType="touchUpInside" id="QB9-Up-l37"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmT-G2-iRP">
                                 <rect key="frame" x="261" y="576" width="98" height="42"/>
@@ -252,6 +261,9 @@
                                 <state key="normal" title="Start" backgroundImage="buttonImageNEW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="startStopButtonTapped:" destination="1qC-Yv-LYR" eventType="touchUpInside" id="rdY-NE-deo"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0t-mJ-waZ">
                                 <rect key="frame" x="102" y="513" width="170" height="50"/>
@@ -272,6 +284,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hamiltion" image="square.and.arrow.down" catalog="system" id="wa1-a6-uuj"/>
+                    <connections>
+                        <outlet property="fi02TextField" destination="p3h-EA-JON" id="dwh-tB-OW4"/>
+                        <outlet property="psiTextField" destination="fC0-JB-5fd" id="5jk-gs-Irh"/>
+                        <outlet property="rateTextField" destination="plX-9n-qYK" id="WbC-Pq-vIp"/>
+                        <outlet property="startStopBtn" destination="FmT-G2-iRP" id="Z40-C8-KJC"/>
+                        <outlet property="tankSizePicker" destination="lfF-Al-qiP" id="yiw-AE-7IW"/>
+                        <outlet property="timeLabel" destination="SLa-QL-QJQ" id="O6I-wp-dYz"/>
+                        <outlet property="timerLabel" destination="U0t-mJ-waZ" id="JXh-Vn-iPG"/>
+                        <outlet property="vtTextField" destination="eAE-6N-SBz" id="wbF-nG-Grk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAM-uL-xz8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

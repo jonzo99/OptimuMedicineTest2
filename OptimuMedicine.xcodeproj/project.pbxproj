@@ -110,11 +110,11 @@
 				D96B5FD026C4E9CA00F116D7 /* AppDelegate.swift */,
 				D96B5FD226C4E9CA00F116D7 /* SceneDelegate.swift */,
 				D96B5FD626C4E9CA00F116D7 /* Main.storyboard */,
+				D99CFE5F26C58A6100B24CB3 /* HamiltonViewController.swift */,
 				D99CFE6126C58ACB00B24CB3 /* freeFlowViewController.swift */,
 				D96B5FD926C4E9CB00F116D7 /* Assets.xcassets */,
 				D96B5FDB26C4E9CB00F116D7 /* LaunchScreen.storyboard */,
 				D96B5FDE26C4E9CB00F116D7 /* Info.plist */,
-				D99CFE5F26C58A6100B24CB3 /* HamiltonViewController.swift */,
 			);
 			path = OptimuMedicine;
 			sourceTree = "<group>";
