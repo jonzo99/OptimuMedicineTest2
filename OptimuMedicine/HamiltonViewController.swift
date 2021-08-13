@@ -8,7 +8,8 @@
 import UIKit
 import UserNotifications
 import AVFAudio
-
+// rember i need to push the code i wasnt able to earlier because the wifi was down so that is somehting that i need to do
+//
 class HamiltonViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UNUserNotificationCenterDelegate {
     
     @IBOutlet weak var tankSizePicker: UIPickerView!
@@ -184,7 +185,8 @@ class HamiltonViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
-        self.countDown = getTotalSecondsLeft()
+        //self.countDown = getTotalSecondsLeft()
+        countDown = 0
         self.timer.invalidate()
         self.timerLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
         self.startStopBtn.setTitle("START", for: .normal)
