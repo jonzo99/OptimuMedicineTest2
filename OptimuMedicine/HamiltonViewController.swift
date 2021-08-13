@@ -197,10 +197,12 @@ class HamiltonViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         userNotificationCenter.removeAllPendingNotificationRequests()
         
         // instead of setting all the values to zero I could try to reset the values back to the placeholder text
-        psiTextField.text = String(0)
-        fi02TextField.text = String(0)
-        rateTextField.text = String(0)
-        vtTextField.text = String(0)
+        //psiTextField.text = String(0)
+        // because my text is nothing my placeholder text will appear
+        psiTextField.text = ""
+        fi02TextField.text = ""
+        rateTextField.text = ""
+        vtTextField.text = ""
         timeLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
     }
     

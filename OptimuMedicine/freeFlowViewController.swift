@@ -176,6 +176,7 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         //self.countDown = getTotalSecondsLeft()
+        
         countDown = 0
         self.timer.invalidate()
         self.timerLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
@@ -183,8 +184,8 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.startStopBtn.setTitleColor(UIColor.green, for: .normal)
         // this should cancel my notifications that I have created when I press the pause button
         userNotificationCenter.removeAllPendingNotificationRequests()
-        psiTextField.text = String(0)
-        flowRateTextField.text = String(0)
+        psiTextField.text = ""
+        flowRateTextField.text = ""
         timeLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
     }
     
