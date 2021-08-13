@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iKV-XT-BmU">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BP0-tR-mRN" customClass="freeFlowViewController" customModule="OptimuMedicine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C3r-7k-zfh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="84J-pR-dmr">
-                                <rect key="frame" x="43" y="305.5" width="94" height="216"/>
+                                <rect key="frame" x="43" y="191" width="94" height="216"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tank Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDk-bb-9PG">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="24"/>
@@ -45,10 +45,10 @@
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsQ-gU-PVm">
-                                <rect key="frame" x="168" y="280.5" width="172" height="79"/>
+                                <rect key="frame" x="168" y="166" width="172" height="79"/>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tank psi" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JI9-6n-4le">
-                                <rect key="frame" x="177" y="369" width="154" height="34"/>
+                                <rect key="frame" x="177" y="254.5" width="154" height="34"/>
                                 <color key="backgroundColor" red="0.56794315579999999" green="0.57294082639999999" blue="0.58430308099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="154" id="7w2-AX-EdC"/>
@@ -63,7 +63,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utt-yw-0Hv">
-                                <rect key="frame" x="177" y="495" width="154" height="34"/>
+                                <rect key="frame" x="177" y="380.5" width="154" height="34"/>
                                 <color key="backgroundColor" red="0.56794315579999999" green="0.57294082639999999" blue="0.58430308099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="lmg-Zb-hkW"/>
@@ -79,7 +79,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmY-HP-LUI">
-                                <rect key="frame" x="152.5" y="771" width="109" height="42"/>
+                                <rect key="frame" x="138.5" y="576" width="98" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Calc" backgroundImage="buttonImageNEW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,7 +89,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfh-4E-qMF">
-                                <rect key="frame" x="20" y="771" width="108.5" height="42"/>
+                                <rect key="frame" x="16" y="576" width="98.5" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="bv4-Nt-9NF"/>
                                 </constraints>
@@ -102,16 +102,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free Flow Oxygen Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fy-3V-xuS">
-                                <rect key="frame" x="42" y="204.5" width="330" height="30"/>
+                                <rect key="frame" x="42" y="90" width="291" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QN4-bH-7nl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="31"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="flow rate" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QKI-nn-afR">
-                                <rect key="frame" x="177" y="431" width="154" height="34"/>
+                                <rect key="frame" x="177" y="316.5" width="154" height="34"/>
                                 <color key="backgroundColor" red="0.56794315579999999" green="0.57294082639999999" blue="0.58430308099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
@@ -122,16 +122,16 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Optimum_Medicine-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="xRE-qc-OFr">
-                                <rect key="frame" x="147" y="44" width="120" height="153"/>
+                                <rect key="frame" x="147" y="0.0" width="81" height="82.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q17-PS-HNu">
-                                <rect key="frame" x="102" y="587.5" width="210" height="129.5"/>
+                                <rect key="frame" x="102" y="473" width="171" height="49"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="31"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPO-Uj-j5L">
-                                <rect key="frame" x="285.5" y="771" width="108.5" height="42"/>
+                                <rect key="frame" x="260.5" y="576" width="98.5" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Start" backgroundImage="buttonImageNEW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -201,11 +201,11 @@
             <objects>
                 <viewController id="1qC-Yv-LYR" customClass="HamiltonViewController" customModule="OptimuMedicine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qpp-6E-XT4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="glJ-oj-CCy">
-                                <rect key="frame" x="81" y="274" width="90.5" height="348"/>
+                                <rect key="frame" x="42" y="159.5" width="90.5" height="348"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tank Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd4-3y-sfA">
                                         <rect key="frame" x="0.0" y="0.0" width="90.5" height="24"/>
@@ -252,7 +252,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tank psi" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fC0-JB-5fd">
-                                <rect key="frame" x="217" y="330" width="154" height="34"/>
+                                <rect key="frame" x="178" y="215.5" width="154" height="34"/>
                                 <color key="backgroundColor" red="0.56794315579999999" green="0.57294082639999999" blue="0.58430308099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="GJ2-zd-vrA"/>
@@ -267,7 +267,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="rate" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plX-9n-qYK">
-                                <rect key="frame" x="218" y="431" width="154" height="34"/>
+                                <rect key="frame" x="179" y="316.5" width="154" height="34"/>
                                 <color key="backgroundColor" red="0.56794315579999999" green="0.57294082639999999" blue="0.58430308099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
@@ -278,7 +278,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vt(ml)" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAE-6N-SBz">
-                                <rect key="frame" x="217" y="487" width="154" height="34"/>
+                                <rect key="frame" x="178" y="372.5" width="154" height="34"/>
                                 <color key="backgroundColor" red="0.56794315579999999" green="0.57294082639999999" blue="0.58430308099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="W9X-Lj-kbz"/>
@@ -292,7 +292,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Tox-Wa-AFa">
-                                <rect key="frame" x="217" y="539" width="154" height="32"/>
+                                <rect key="frame" x="178" y="424.5" width="154" height="32"/>
                                 <color key="backgroundColor" red="0.56794315579999999" green="0.57294082639999999" blue="0.58430308099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="DVB-LV-rsH"/>
@@ -306,7 +306,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdR-KZ-WNO">
-                                <rect key="frame" x="20" y="771" width="108.5" height="42"/>
+                                <rect key="frame" x="16" y="576" width="98.5" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="aAB-cd-Gbs"/>
                                 </constraints>
@@ -319,7 +319,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egl-bc-aZN">
-                                <rect key="frame" x="152.5" y="771" width="109" height="42"/>
+                                <rect key="frame" x="138.5" y="576" width="98" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Calc" backgroundImage="buttonImageNEW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -329,7 +329,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmT-G2-iRP">
-                                <rect key="frame" x="285.5" y="771" width="108.5" height="42"/>
+                                <rect key="frame" x="260.5" y="576" width="98.5" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Start" backgroundImage="buttonImageNEW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -339,7 +339,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fi02%" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p3h-EA-JON">
-                                <rect key="frame" x="218" y="380" width="154" height="34"/>
+                                <rect key="frame" x="179" y="265.5" width="154" height="34"/>
                                 <color key="backgroundColor" red="0.56794315579999999" green="0.57294082639999999" blue="0.58430308099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="UCh-Xb-KDb"/>
@@ -353,13 +353,13 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Optimum_Medicine-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ACU-bQ-s5m">
-                                <rect key="frame" x="147" y="44" width="120" height="153"/>
+                                <rect key="frame" x="147" y="0.0" width="81" height="82.5"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-Al-qiP">
-                                <rect key="frame" x="209" y="242" width="172" height="80"/>
+                                <rect key="frame" x="170" y="127.5" width="172" height="80"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLa-QL-QJQ">
-                                <rect key="frame" x="219" y="591.5" width="154" height="34"/>
+                                <rect key="frame" x="180" y="477" width="154" height="34"/>
                                 <color key="backgroundColor" red="0.56794315579999999" green="0.57294082639999999" blue="0.58430308099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -372,17 +372,17 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0t-mJ-waZ">
-                                <rect key="frame" x="102" y="634" width="210" height="129.5"/>
+                                <rect key="frame" x="102" y="519.5" width="171" height="49"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="31"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hamilton T1 Oxygen Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cS-yY-8TT">
-                                <rect key="frame" x="42" y="204.5" width="330" height="30"/>
+                                <rect key="frame" x="42" y="90" width="291" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5z6-Wp-yWM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="31"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
