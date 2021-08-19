@@ -23,6 +23,7 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBOutlet weak var startStopBtn: UIButton!
     
+    var sendNotification = SendNotification();
     
     var tankSize = ["D", "E", "M", "Kevlar"]
     var tank = 0.16
@@ -45,6 +46,9 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var totalTimeInSec2 = 0
     var timePassedInBack = 0
     var first = false
+    
+    var isInForeground = true
+    var isInBackground = false
     
     let userNotificationCenter = UNUserNotificationCenter.current()
 
@@ -81,7 +85,7 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // the person going throught the time zones since i only care about how much seconds has passed
         //calendar.timeZone = TimeZone(identifier: "UTC")
         print("")
-        print("app move to the background")
+        print("app move to the background FREE FLOW")
         print("")
         let components = calendar.dateComponents([.hour, .year, .minute, .second], from: date)
         print("all comp", components)
@@ -93,14 +97,17 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         print(totalTimeInSec)
         print(hrs, min, sec)
+        isInForeground = false
         
     }
+    
     @objc func appMovedToForeground() {
+        
         totalTimeInSec2 = 0
         let date = Date()
         let calendar = Calendar.current
         print("")
-        print("App moved to foreGround")
+        print("App moved to foreGround FREE FLOW")
         print("")
         let components = calendar.dateComponents([.hour, .year, .minute, .second], from: date)
         print("all comp", components)
@@ -125,12 +132,19 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         print(totalTimeInSec2, "total time insec")
         print(timePassedInBack, "this is how much time has passed in the back")
         print(countDown, "is in foreground")
-        if (timerCounting == true) {
+        // if it left from foreground and than it is going into foreground again i dont want to subtactseconds
+        // maybe create an if else statement
+        // isInforground = true
+        // isInbackground = falst
+        // I will do this because I enter in foreground
+        print("checking to see  ", isInForeground, " and is timercount ", timerCounting)
+        if (timerCounting == true && isInForeground == false) {
             // I am subrtracting 1 because when the conversion happens between foreground and background i think i lose a second
             countDown = countDown - (timePassedInBack - 2)
         }
         
         print(countDown, "app is in foreground2")
+        isInForeground = true
     }
     
     func requestNotificationAuthorization() {
@@ -139,34 +153,6 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.userNotificationCenter.requestAuthorization(options: authOptions) { (success, error) in
             if let error = error {
                 print("ERror", error)
-            }
-        }
-    }
-    
-    func sendNotification(timeInterval: Double, title: String, body: String, sound: String) {
-        // create new notifcation content instance
-        let notificationContent = UNMutableNotificationContent()
-        
-        // Add the content to the notification content
-        notificationContent.title = title
-        notificationContent.body = body
-        //notificationContent.sound = .defaultCriticalSound(withAudioVolume: 100)
-        notificationContent.sound = .criticalSoundNamed(UNNotificationSoundName.init(rawValue: sound), withAudioVolume: 1.0)
-        // this is the little number on the app that shows you how many notifications you have left
-        //notificationContent.badge = NSNumber(value: 1)
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
-        
-        // create a unique indentifier to be able to get multiople notifications
-        let identifier = UUID.init().uuidString
-        
-        let request = UNNotificationRequest(identifier: identifier, content: notificationContent, trigger: trigger)
-        print(trigger.timeInterval, "jfkdsfjs")
-        print(identifier)
-        
-        userNotificationCenter.add(request) { (error) in
-            if let error = error {
-                print("Notification Error: ", error)
             }
         }
     }
@@ -210,12 +196,12 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             if countDown >= 600 {
                 let minuteLeft = countDown - 600
                 print(countDown)
-                sendNotification(timeInterval: Double(minuteLeft), title: "10 Minutes Left", body: "FREE FLOW: there is 10 minutes left", sound: "critalAlarm.wav")
+                sendNotification.sendLocalNotification(timeInterval: Double(minuteLeft), title: "10 mins Left", body: "FREE FLOW there is 10 mins left", sound: "critalAlarm.wav")
             }
             if countDown >= 60 {
                 let onesecond = countDown - 60
                 print(countDown)
-                sendNotification(timeInterval: Double(onesecond), title: "TIMER IS DONE", body: "FREE FLOW: there is 1 minute left", sound: "iphone_alarm.mp3")
+                sendNotification.sendLocalNotification(timeInterval: Double(onesecond), title: "1 min Left", body: "FREE FLOW there is 1 mins left", sound: "iphone_alarm.mp3")
             }
             timerCounting = true
             startStopBtn.setTitle("STOP", for: .normal)

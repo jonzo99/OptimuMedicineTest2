@@ -18,6 +18,7 @@
 		D99CFE5E26C586F900B24CB3 /* iphone_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D99CFE5D26C586F900B24CB3 /* iphone_alarm.mp3 */; };
 		D99CFE6026C58A6100B24CB3 /* HamiltonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CFE5F26C58A6100B24CB3 /* HamiltonViewController.swift */; };
 		D99CFE6226C58ACB00B24CB3 /* freeFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CFE6126C58ACB00B24CB3 /* freeFlowViewController.swift */; };
+		D9C7473526CED38200A90C68 /* SendNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C7473426CED38200A90C68 /* SendNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D99CFE5D26C586F900B24CB3 /* iphone_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = iphone_alarm.mp3; sourceTree = "<group>"; };
 		D99CFE5F26C58A6100B24CB3 /* HamiltonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamiltonViewController.swift; sourceTree = "<group>"; };
 		D99CFE6126C58ACB00B24CB3 /* freeFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freeFlowViewController.swift; sourceTree = "<group>"; };
+		D9C7473426CED38200A90C68 /* SendNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				D96B5FD026C4E9CA00F116D7 /* AppDelegate.swift */,
 				D96B5FD226C4E9CA00F116D7 /* SceneDelegate.swift */,
 				D96B5FD626C4E9CA00F116D7 /* Main.storyboard */,
+				D9C7473426CED38200A90C68 /* SendNotification.swift */,
 				D99CFE5F26C58A6100B24CB3 /* HamiltonViewController.swift */,
 				D99CFE6126C58ACB00B24CB3 /* freeFlowViewController.swift */,
 				D96B5FD926C4E9CB00F116D7 /* Assets.xcassets */,
@@ -272,6 +275,7 @@
 				D99CFE6226C58ACB00B24CB3 /* freeFlowViewController.swift in Sources */,
 				D96B5FD126C4E9CA00F116D7 /* AppDelegate.swift in Sources */,
 				D99CFE6026C58A6100B24CB3 /* HamiltonViewController.swift in Sources */,
+				D9C7473526CED38200A90C68 /* SendNotification.swift in Sources */,
 				D96B5FD326C4E9CA00F116D7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
