@@ -166,7 +166,7 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         //self.countDown = getTotalSecondsLeft()
-        
+        timerCounting = false
         countDown = 0
         self.timer.invalidate()
         self.timerLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
@@ -181,7 +181,7 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBAction func startStopButtonTapped(_ sender: UIButton) {
         // Im adding this because if the countdown is at zero it will grab the formula and countdown using whatever has been calculated
-        if countDown == 0 {
+        if countDown <= 0 {
             self.countDown = getTotalSecondsLeft()
             first = true
         }
@@ -194,12 +194,12 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             userNotificationCenter.removeAllPendingNotificationRequests()
         } else {
             if countDown >= 600 {
-                let minuteLeft = countDown - 600
+                let minuteLeft = countDown - 599
                 print(countDown)
                 sendNotification.sendLocalNotification(timeInterval: Double(minuteLeft), title: "10 mins Left", body: "FREE FLOW there is 10 mins left", sound: "critalAlarm.wav")
             }
             if countDown >= 60 {
-                let onesecond = countDown - 60
+                let onesecond = countDown - 59
                 print(countDown)
                 sendNotification.sendLocalNotification(timeInterval: Double(onesecond), title: "1 min Left", body: "FREE FLOW there is 1 mins left", sound: "iphone_alarm.mp3")
             }
@@ -217,7 +217,9 @@ class freeFlowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @objc func timerCounter() -> Void {
         //countDown = countDown - 1
         //let t = getTotalSecondsLeft()
-        countDown -= 1
+        if (countDown > 0) {
+            countDown -= 1
+        }
         // if count is on 0 or less than zero my timer will stop
         if countDown <= 0 {
             timer.invalidate()

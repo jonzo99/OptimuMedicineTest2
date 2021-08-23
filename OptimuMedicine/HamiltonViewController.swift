@@ -158,6 +158,7 @@ class HamiltonViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         //self.countDown = getTotalSecondsLeft()
         countDown = 0
+        timerCounting = false
         self.timer.invalidate()
         self.timerLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
         self.startStopBtn.setTitle("START", for: .normal)
@@ -179,7 +180,9 @@ class HamiltonViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBAction func startStopButtonTapped(_ sender: UIButton) {
         // this might have to be put in the else if the user has to double tap the start button
-        if countDown == 0 {
+        
+        
+        if countDown <= 0 {
             self.countDown = getTotalSecondsLeft()
             first = true
         }
@@ -193,14 +196,14 @@ class HamiltonViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             userNotificationCenter.removeAllPendingNotificationRequests()
         } else {
             if countDown >= 600 {
-                let minuteLeft = countDown - 600
+                let minuteLeft = countDown - 599
                 print(countDown)
                 /*sendNotification(timeInterval: Double(minuteLeft), title: "10 Minutes Left", body: "HAMILTON: there is 10 minutes left", sound: "critalAlarm.wav") */
                 sendNotification.sendLocalNotification(timeInterval: Double(minuteLeft), title: "10 mins Left", body: "HAMILTON there is 10 mins left", sound: "critalAlarm.wav")
             }
             if countDown >= 60 {
                 print("I went throud the 60 sec loop")
-                let tenseconds = countDown - 60
+                let tenseconds = countDown - 59
                 print(countDown)
                 sendNotification.sendLocalNotification(timeInterval: Double(tenseconds), title: "1 min Left", body: "HAMILTON there is 1 mins left", sound: "critalAlarm.wav")
             }
@@ -220,8 +223,12 @@ class HamiltonViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @objc func timerCounter() -> Void {
         print(countDown, "this is in timerCounter()")
-        countDown -= 1
-        if countDown <= 0 {
+        
+        //countDown -= 1
+        if (countDown > 0) {
+            countDown -= 1
+        }
+        if (countDown <= 0) {
             timer.invalidate()
         }
         // if i want to add a message when it hits a certain amount of seconds i should make phone vibrate show notification
